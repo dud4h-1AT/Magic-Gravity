@@ -585,3 +585,1331 @@ footer .copyright {
         padding: 12px 22px;
     }
 }
+/* =====================================================
+   EQUIPES DA COMPETIÇÃO
+   ===================================================== */
+
+.equipes {
+    max-width: 1200px;
+}
+
+
+/* Grade */
+
+.equipes-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-top: 50px;
+}
+
+
+/* Card */
+
+.equipe {
+    position: relative;
+
+    padding: 45px 30px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(35, 25, 50, 0.95),
+            rgba(10, 8, 18, 0.95)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.4s;
+}
+
+
+/* Brilho */
+
+.equipe::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    top: -100px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    opacity: 0.15;
+
+    filter: blur(20px);
+}
+
+
+/* Hover */
+
+.equipe:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.5);
+}
+
+
+/* Símbolo */
+
+.simbolo-equipe {
+    width: 110px;
+    height: 110px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 3.5rem;
+
+    background:
+        rgba(0,0,0,0.35);
+
+    border: 2px solid rgba(255,255,255,0.15);
+}
+
+
+/* Nome */
+
+.equipe h3 {
+    font-size: 1.8rem;
+
+    margin-bottom: 10px;
+}
+
+
+/* Lema */
+
+.lema {
+    color: #c9b8df;
+
+    font-style: italic;
+
+    margin-bottom: 20px;
+}
+
+
+/* Descrição */
+
+.equipe > p:not(.lema) {
+    color: #a9a1b3;
+
+    margin-bottom: 25px;
+}
+
+
+/* Atributo */
+
+.atributo {
+    display: inline-block;
+
+    padding: 8px 20px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: #ddd;
+
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   CORES DAS EQUIPES
+   ===================================================== */
+
+
+/* Dragões */
+
+.equipe-vermelha {
+    border-color: rgba(210, 65, 55, 0.35);
+}
+
+.equipe-vermelha::before {
+    background: #ff3b24;
+}
+
+.equipe-vermelha h3 {
+    color: #e66a5d;
+}
+
+.equipe-vermelha .simbolo-equipe {
+    border-color: #a83b32;
+}
+
+
+/* Céu */
+
+.equipe-azul {
+    border-color: rgba(70, 130, 220, 0.35);
+}
+
+.equipe-azul::before {
+    background: #318cff;
+}
+
+.equipe-azul h3 {
+    color: #73aef5;
+}
+
+.equipe-azul .simbolo-equipe {
+    border-color: #3978bd;
+}
+
+
+/* Lua */
+
+.equipe-roxa {
+    border-color: rgba(145, 75, 210, 0.35);
+}
+
+.equipe-roxa::before {
+    background: #a83dff;
+}
+
+.equipe-roxa h3 {
+    color: #bd82e8;
+}
+
+.equipe-roxa .simbolo-equipe {
+    border-color: #8243aa;
+}
+
+
+/* Floresta */
+
+.equipe-verde {
+    border-color: rgba(70, 170, 100, 0.35);
+}
+
+.equipe-verde::before {
+    background: #35d26a;
+}
+
+.equipe-verde h3 {
+    color: #73d991;
+}
+
+.equipe-verde .simbolo-equipe {
+    border-color: #438c58;
+}
+
+
+/* =====================================================
+   EQUIPES NO CELULAR
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .equipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =====================================================
+   COMPETIÇÃO ANUAL
+   ===================================================== */
+
+.competicao {
+    min-height: auto;
+
+    padding: 120px 30px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(95, 55, 150, 0.35),
+            transparent 50%
+        ),
+        linear-gradient(
+            180deg,
+            #0d0918,
+            #080611
+        );
+}
+
+.competicao-conteudo {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.introducao-competicao {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    color: #aaa2b9;
+
+    font-size: 1.1rem;
+}
+
+
+/* =====================================================
+   DESAFIOS
+   ===================================================== */
+
+.desafios {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-top: 60px;
+}
+
+
+/* CARD DO DESAFIO */
+
+.desafio {
+
+    position: relative;
+
+    padding: 45px 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(37, 25, 54, 0.95),
+            rgba(13, 9, 23, 0.95)
+        );
+
+    border: 1px solid rgba(211, 176, 83, 0.2);
+
+    text-align: center;
+
+    transition: all 0.4s ease;
+
+    overflow: hidden;
+}
+
+
+/* brilho */
+
+.desafio::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    top: -100px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #9b63d7;
+
+    opacity: 0.07;
+
+    filter: blur(20px);
+
+    transition: 0.4s;
+}
+
+
+/* hover */
+
+.desafio:hover {
+
+    transform: translateY(-10px);
+
+    border-color: rgba(216, 182, 90, 0.7);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.desafio:hover::before {
+
+    opacity: 0.18;
+}
+
+
+/* número */
+
+.numero {
+
+    position: absolute;
+
+    top: 15px;
+    left: 20px;
+
+    color: #806c42;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 2px;
+}
+
+
+/* ícone */
+
+.desafio-icone {
+
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(10, 7, 18, 0.8);
+
+    border: 1px solid rgba(215, 182, 90, 0.25);
+
+    font-size: 3.5rem;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* título */
+
+.desafio h3 {
+
+    color: #d8b65a;
+
+    font-size: 1.6rem;
+
+    margin-bottom: 15px;
+}
+
+
+/* descrição */
+
+.desafio p {
+
+    color: #a9a1b3;
+
+    margin-bottom: 25px;
+}
+
+
+/* tipo */
+
+.tipo {
+
+    display: inline-block;
+
+    padding: 7px 16px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(214, 179, 84, 0.08);
+
+    border: 1px solid
+        rgba(214, 179, 84, 0.2);
+
+    color: #cbb678;
+
+    font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   MENSAGEM DO ARQUIMAGO
+   ===================================================== */
+
+.mensagem-arquimago {
+
+    max-width: 800px;
+
+    margin: 90px auto 0;
+
+    padding: 55px 35px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(50, 35, 70, 0.65),
+            rgba(15, 10, 25, 0.8)
+        );
+
+    border-top: 1px solid
+        rgba(214, 179, 84, 0.4);
+
+    border-bottom: 1px solid
+        rgba(214, 179, 84, 0.4);
+}
+
+
+/* selo */
+
+.selo {
+
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #c9a94d;
+
+    color: #d6b354;
+
+    font-size: 1.8rem;
+
+    box-shadow:
+        0 0 25px rgba(214,179,84,0.15);
+}
+
+
+/* frase */
+
+.frase {
+
+    margin: 25px auto;
+
+    max-width: 650px;
+
+    color: #ded5e7;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.4rem;
+
+    font-style: italic;
+
+    line-height: 1.8;
+}
+
+
+/* assinatura */
+
+.assinatura {
+
+    color: #c7a958;
+
+    font-size: 0.95rem;
+
+}
+
+
+/* =====================================================
+   COMPETIÇÃO NO CELULAR
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .desafios {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .competicao {
+
+        padding: 90px 20px;
+
+    }
+
+    .frase {
+
+        font-size: 1.15rem;
+
+    }
+
+}
+/* =====================================================
+   PERSONAGENS
+   ===================================================== */
+
+.personagens {
+    max-width: 1200px;
+}
+
+
+/* GRID */
+
+.personagens-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-top: 50px;
+
+}
+
+
+/* CARTA */
+
+.personagem {
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b1328,
+            #0b0812
+        );
+
+    border: 1px solid
+        rgba(214, 179, 84, 0.2);
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+}
+
+
+.personagem:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(214, 179, 84, 0.7);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.5);
+
+}
+
+
+/* TOPO DA CARTA */
+
+.personagem-topo {
+
+    height: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+}
+
+
+/* Fundos diferentes */
+
+.arquimago {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(174, 114, 255, 0.45),
+            #1b0e29
+        );
+
+}
+
+.aluna {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(92, 81, 180, 0.5),
+            #0e0b21
+        );
+
+}
+
+.aluno {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(180, 62, 40, 0.5),
+            #200d0c
+        );
+
+}
+
+.criatura-personagem {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(190, 74, 35, 0.55),
+            #210c08
+        );
+
+}
+
+
+/* AVATAR */
+
+.personagem-avatar {
+
+    width: 140px;
+
+    height: 140px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(5, 3, 10, 0.65);
+
+    border: 2px solid
+        rgba(222, 192, 102, 0.4);
+
+    font-size: 5rem;
+
+    box-shadow:
+        0 0 40px
+        rgba(214,179,84,0.15);
+
+}
+
+
+/* CONTEÚDO */
+
+.personagem-conteudo {
+
+    padding: 30px;
+
+    text-align: left;
+
+}
+
+
+.personagem-cargo {
+
+    color: #b79a50;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+}
+
+
+.personagem h3 {
+
+    color: #eadcae;
+
+    font-size: 1.6rem;
+
+    margin: 8px 0 15px;
+
+}
+
+
+.personagem-descricao {
+
+    color: #a9a1b3;
+
+    font-size: 0.95rem;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* FICHA */
+
+.ficha {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top: 1px solid
+        rgba(255,255,255,0.08);
+
+    padding-top: 20px;
+
+    gap: 10px;
+
+}
+
+
+.ficha div {
+
+    color: #c7bdd1;
+
+    font-size: 0.8rem;
+
+}
+
+
+.ficha span {
+
+    display: block;
+
+    color: #776d82;
+
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+
+    margin-bottom: 4px;
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .personagens-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .ficha {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+}
+/* =====================================================
+   PERSONAGENS
+   ===================================================== */
+
+.personagens {
+    max-width: 1200px;
+}
+
+
+/* GRID */
+
+.personagens-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-top: 50px;
+
+}
+
+
+/* CARTA */
+
+.personagem {
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b1328,
+            #0b0812
+        );
+
+    border: 1px solid
+        rgba(214, 179, 84, 0.2);
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+}
+
+
+.personagem:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(214, 179, 84, 0.7);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.5);
+
+}
+
+
+/* TOPO DA CARTA */
+
+.personagem-topo {
+
+    height: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+}
+
+
+/* Fundos diferentes */
+
+.arquimago {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(174, 114, 255, 0.45),
+            #1b0e29
+        );
+
+}
+
+.aluna {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(92, 81, 180, 0.5),
+            #0e0b21
+        );
+
+}
+
+.aluno {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(180, 62, 40, 0.5),
+            #200d0c
+        );
+
+}
+
+.criatura-personagem {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(190, 74, 35, 0.55),
+            #210c08
+        );
+
+}
+
+
+/* AVATAR */
+
+.personagem-avatar {
+
+    width: 140px;
+
+    height: 140px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(5, 3, 10, 0.65);
+
+    border: 2px solid
+        rgba(222, 192, 102, 0.4);
+
+    font-size: 5rem;
+
+    box-shadow:
+        0 0 40px
+        rgba(214,179,84,0.15);
+
+}
+
+
+/* CONTEÚDO */
+
+.personagem-conteudo {
+
+    padding: 30px;
+
+    text-align: left;
+
+}
+
+
+.personagem-cargo {
+
+    color: #b79a50;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+}
+
+
+.personagem h3 {
+
+    color: #eadcae;
+
+    font-size: 1.6rem;
+
+    margin: 8px 0 15px;
+
+}
+
+
+.personagem-descricao {
+
+    color: #a9a1b3;
+
+    font-size: 0.95rem;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* FICHA */
+
+.ficha {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top: 1px solid
+        rgba(255,255,255,0.08);
+
+    padding-top: 20px;
+
+    gap: 10px;
+
+}
+
+
+.ficha div {
+
+    color: #c7bdd1;
+
+    font-size: 0.8rem;
+
+}
+
+
+.ficha span {
+
+    display: block;
+
+    color: #776d82;
+
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+
+    margin-bottom: 4px;
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .personagens-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .ficha {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+}
+/* =====================================================
+   IDENTIDADE DA ROCHA CHUEIRI
+   ===================================================== */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    line-height: 1;
+}
+
+.logo span,
+.logo strong {
+    display: block;
+}
+
+.logo span {
+    color: #9d8cae;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 3px;
+}
+
+.logo strong {
+    color: #d8b65a;
+
+    font-size: 0.95rem;
+
+    letter-spacing: 2px;
+}
+
+.brasao-pequeno {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #b9984b;
+
+    border-radius: 50%;
+
+    color: #d8b65a;
+
+    font-size: 1.2rem;
+}
+
+
+/* =====================================================
+   BRASÃO PRINCIPAL
+   ===================================================== */
+
+.brasao-escola {
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 105px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 0.9;
+
+}
+
+.brasao-circulo {
+
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 2px solid #c8a853;
+
+    color: #d8b65a;
+
+    font-size: 2rem;
+
+    box-shadow:
+        0 0 25px
+        rgba(216,182,90,0.2);
+
+}
+
+.brasao-escola span {
+
+    margin-top: 10px;
+
+    color: #9e91aa;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 4px;
+
+}
+
+.brasao-escola strong {
+
+    color: #c9aa58;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+
+}
+/* =====================================================
+   BRASÕES DAS EQUIPES
+   ===================================================== */
+
+.simbolo-equipe {
+
+    position: relative;
+
+    clip-path: polygon(
+        50% 0%,
+        92% 18%,
+        85% 75%,
+        50% 100%,
+        15% 75%,
+        8% 18%
+    );
+
+    border-radius: 0;
+
+    width: 120px;
+    height: 140px;
+
+    background: #171020;
+
+    border: none;
+
+    box-shadow:
+        0 0 30px rgba(0,0,0,0.5);
+}
+
+
+/* Dragões */
+
+.simbolo-dragao {
+
+    background:
+        linear-gradient(
+            145deg,
+            #591914,
+            #180808
+        );
+
+    color: #e76c55;
+
+}
+
+
+/* Céu */
+
+.simbolo-ceu {
+
+    background:
+        linear-gradient(
+            145deg,
+            #173d68,
+            #081321
+        );
+
+    color: #75b7ff;
+
+}
+
+
+/* Lua */
+
+.simbolo-lua {
+
+    background:
+        linear-gradient(
+            145deg,
+            #482467,
+            #14091f
+        );
+
+    color: #c38cff;
+
+}
+
+
+/* Floresta */
+
+.simbolo-floresta {
+
+    background:
+        linear-gradient(
+            145deg,
+            #174b2b,
+            #07150c
+        );
+
+    color: #72d68d;
+
+}
